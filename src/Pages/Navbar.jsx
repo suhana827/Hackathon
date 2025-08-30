@@ -1,28 +1,31 @@
-import React from 'react'
-import "./Navbar.css"
+import React from "react";
+import { Link } from "react-router-dom";
+import { FaHome, FaPlus, FaHeart, FaMagic, FaUsers } from "react-icons/fa";
+import "./Navbar.css";
 
-function Navbar() {
+const Navbar = () => {
   return (
-     <nav className="navbar">
+    <nav className="navbar">
+      <div className="logo">RecipeBook</div>
       <ul>
         <li>
-          <span className="icon">🏠</span> Dashboard
+          <Link to="/"><FaHome className="icon" /> Dashboard</Link>
         </li>
         <li>
-          <span className="icon">➕</span> Add Recipe
+          <Link to="/add-recipe"><FaPlus className="icon" /> Add Recipe</Link>
         </li>
         <li>
-          <span className="icon">❤️</span> Favourites
+          <Link to="/favorites"><FaHeart className="icon" /> Favourites</Link>
         </li>
         <li>
-          <span className="icon">✨</span> All Recipe
+          <Link to="/ai-recipe"><FaMagic className="icon" /> AI Recipes</Link>
         </li>
         <li>
-          <span className="icon">👥</span> Public Feed
+          <Link to="/public-feed"><FaUsers className="icon" /> Public Feed</Link>
         </li>
       </ul>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

@@ -1,28 +1,39 @@
-
+/* Reset and body */
 body, html {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: #fff;
 }
 
+/* Container for everything below navbar */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* content starts below navbar */
+  min-height: calc(100vh - 100px); /* full viewport minus navbar height */
+  padding-top: 100px; /* space for sticky navbar */
+  width: 100%;
+  text-align: center;
+}
+
+/* AI Generator section */
 .ai-generator {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; 
-  min-height: calc(100vh - 80px); 
-  padding-top: 40px; 
+  justify-content: flex-start;
   text-align: center;
+  margin-bottom: 40px;
 }
 
-
+/* Headings */
 .ai-generator h2 {
   font-size: 22px;
   font-weight: 600;
   color: #222;
   margin-bottom: 6px;
 }
-
 
 .ai-generator .subtitle {
   font-size: 14px;
@@ -31,8 +42,8 @@ body, html {
   max-width: 500px;
 }
 
-
-.generator-card {
+/* Cards */
+.generator-card, .info-card {
   width: 420px;
   background: #fff;
   border: 1px solid #ddd;
@@ -43,7 +54,7 @@ body, html {
   text-align: left;
 }
 
-
+/* Form inside generator-card */
 .generator-card label {
   font-size: 14px;
   font-weight: 500;
@@ -51,7 +62,6 @@ body, html {
   display: block;
   margin-bottom: 8px;
 }
-
 
 .generator-card input {
   width: 100%;
@@ -67,7 +77,7 @@ body, html {
   border-color: #4f46e5;
 }
 
-
+/* Buttons */
 .generate-btn {
   width: 100%;
   padding: 12px;
@@ -85,16 +95,7 @@ body, html {
   background: #4338ca;
 }
 
-
-.info-card {
-  width: 420px;
-  background: #f9fafb;
-  border: 1px solid #ddd;
-  padding: 20px 25px;
-  border-radius: 10px;
-  text-align: left;
-}
-
+/* Info card */
 .info-card h3 {
   font-size: 16px;
   margin-bottom: 10px;
