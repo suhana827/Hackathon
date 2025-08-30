@@ -9,6 +9,7 @@ function Login({ switchToSignUp }) {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
+    // always check users array
     let users = JSON.parse(localStorage.getItem("users")) || [];
     const user = users.find((u) => u.email === email && u.password === password);
 

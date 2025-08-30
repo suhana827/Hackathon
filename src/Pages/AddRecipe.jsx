@@ -31,4 +31,4 @@ function AddRecipe() {
   )
 }
 
-// export default AddRecipe
+export default AddRecipe

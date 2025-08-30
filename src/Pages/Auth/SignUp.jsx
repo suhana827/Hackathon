@@ -12,21 +12,24 @@ function SignUp({ switchToLogin }) {
     const age = e.target.age.value;
     const password = e.target.password.value;
 
+    // Always fetch users array
     let users = JSON.parse(localStorage.getItem("users")) || [];
 
-    // check if user already exists
+    // check if user already exists by email
     if (users.some((u) => u.email === email)) {
       setMessage("⚠️ User already exists. Please login.");
       return;
     }
 
+    // push new user
     users.push({ username, email, phone, age, password });
     localStorage.setItem("users", JSON.stringify(users));
 
+    // success message
     setMessage("✅ Sign up successful! Please login.");
     e.target.reset();
 
-    // Switch to login after success
+    // switch to login after success
     setTimeout(() => switchToLogin(), 1500);
   };
 
