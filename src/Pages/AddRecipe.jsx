@@ -3,8 +3,8 @@ import "./AddRecipe.css"
 
 function AddRecipe() {
   return (
-    <div class="add-recipe">
-  <form class="recipe-form">
+    <div className="add-recipe">
+  <form className="recipe-form">
     <h2>Add New Recipe</h2>
 
     <label>Recipe Title</label>
@@ -31,4 +31,4 @@ function AddRecipe() {
   )
 }
 
-// export default AddRecipe
+export default AddRecipe

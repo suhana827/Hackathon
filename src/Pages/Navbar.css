@@ -1,31 +1,62 @@
-
 .navbar {
-  background-color: #f8f8f8;
+  position: fixed; /* sticky at top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f0f0f0; /* light grey */
   padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo left, menu right */
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
 
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+/* Menu items */
 .navbar ul {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
+  justify-content: center;
+  flex: 1;
 }
 
 .navbar li {
-  margin-right: 30px;
-  cursor: pointer;
+  margin: 0 15px;
   display: flex;
   align-items: center;
   font-family: Arial, sans-serif;
   font-weight: 500;
-  transition: color 0.2s;
+  transition: color 0.2s, transform 0.2s;
 }
 
-.navbar li:hover {
-  color: #3498db; /* highlight on hover */
+.navbar li a {
+  text-decoration: none;
+  color: #555;
+  display: flex;
+  align-items: center;
 }
 
+.navbar li:hover a {
+  color: #3498db;
+  transform: scale(1.05);
+}
+
+/* Icon spacing */
 .icon {
   margin-right: 8px;
+}
+
+/* Add top padding to page content so it is not hidden under navbar */
+.page-container {
+  padding-top: 80px; /* adjust according to navbar height */
 }
